@@ -13,6 +13,7 @@ interface CreateOrderOptions {
   note?: string;
   orderSource?: string;
   tableNumber?: number;
+  tableCallId?: string;
   paymentMethod?: string;
   cashDetails?: { counts: Record<number, number>; total: number } | null;
   deliveryAddress?: string;
@@ -69,7 +70,7 @@ export async function createOrder(
   const isStaffOrder = options.orderSource === "pos" || options.orderSource === "phone" || options.orderSource === "server";
   const isMenuGuest = !isStaffOrder && menuSession?.restaurant_id === restaurantId && !menuSession.order_id;
   const userId = isMenuGuest ? menuSession.cart_session_id : await getAuthenticatedUserId();
-  const { note, orderSource = "direct", tableNumber, paymentMethod, cashDetails, deliveryAddress, deliveryPostcode, deliveryLat, deliveryLng, clientPhone, scheduledAt } = options;
+  const { note, orderSource = "direct", tableNumber, tableCallId, paymentMethod, cashDetails, deliveryAddress, deliveryPostcode, deliveryLat, deliveryLng, clientPhone, scheduledAt } = options;
 
   const payload = {
     request_id: options.requestId,
@@ -80,6 +81,7 @@ export async function createOrder(
     order_source: orderSource,
     note: note || null,
     table_number: tableNumber || null,
+    table_call_id: orderSource === "server" ? tableCallId || null : null,
     payment_method: paymentMethod || "cash",
     cash_details: cashDetails || null,
     delivery_address: deliveryAddress || null,

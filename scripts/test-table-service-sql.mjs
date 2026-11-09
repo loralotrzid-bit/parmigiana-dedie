@@ -30,6 +30,7 @@ await pg.exec(readFileSync(new URL('../supabase/migrations/20261031105539_table_
 await pg.exec(readFileSync(new URL('../supabase/migrations/20261031190000_phone_delivery_postcode_rates.sql',import.meta.url),'utf8'));
 await pg.exec(readFileSync(new URL('../supabase/migrations/20261031194500_atomic_order_number_allocator.sql',import.meta.url),'utf8'));
 await pg.exec(readFileSync(new URL('../supabase/migrations/20261101100000_permanent_staff_pwa.sql',import.meta.url),'utf8'));
+await pg.exec(readFileSync(new URL('../supabase/migrations/20261109182639_allow_server_table_service_calls.sql',import.meta.url),'utf8'));
 let checks=0;
 async function check(sql,params,expected) { const q=await pg.query(sql,params); assert.deepEqual(q.rows,expected); checks++; }
 async function rejects(sql,params) { await assert.rejects(pg.query(sql,params)); checks++; }
@@ -92,14 +93,25 @@ await check('select count(*)::int as n from phone_order_requests',[],[{n:1}]);
 // New migration: role independent defaults, deny inactive/wrong-role call access, and idempotent staff ticket.
 const staff='33333333-3333-4333-8333-333333333333';
 await pg.query("insert into delivery_drivers(id,restaurant_id,driver_code,full_name,auth_user_id,can_deliver,can_serve) values($1,$2,'LIV-1','Serveur',$3,true,true)",['77777777-7777-4777-8777-777777777777','012aae54-7638-491a-8c69-b3186a10ffaa',staff]);
+await pg.query("insert into delivery_drivers(id,restaurant_id,driver_code,full_name,auth_user_id,can_deliver,can_serve) values($1,$2,'LIV-2','Livreur',$3,true,false)",['66666666-6666-4666-8666-666666666666','012aae54-7638-491a-8c69-b3186a10ffaa','22222222-2222-4222-8222-222222222222']);
 await pg.query("insert into products(id,stock,is_available,is_published) values($1,10,true,true)",['88888888-8888-4888-8888-888888888888']);
-const staffOrder={restaurant_id:'012aae54-7638-491a-8c69-b3186a10ffaa',order_type:'dine_in',subtotal:12,total:12,note:'',table_number:2,payment_method:'cash'};
+await pg.query("INSERT INTO table_service_calls(restaurant_id,table_id,table_number) SELECT restaurant_id,id,2 FROM restaurant_tables WHERE table_number=2");
+const [{id:staffCall}]=(await pg.query("select id from table_service_calls where table_number=2")).rows;
+await pg.exec("SET ROLE authenticated; SET request.jwt.claim.sub='22222222-2222-4222-8222-222222222222'");
+await check("select count(*)::int as n from table_service_calls where id=$1",[staffCall],[{n:0}]);
+await rejects('select advance_table_service($1,$2)',[staffCall,'acknowledged']);
+await pg.exec("SET request.jwt.claim.sub='33333333-3333-4333-8333-333333333333'");
+await check("select count(*)::int as n from table_service_calls where id=$1",[staffCall],[{n:1}]);
+await pg.query('select advance_table_service($1,$2)',[staffCall,'acknowledged']); checks++;
+const staffOrder={restaurant_id:'012aae54-7638-491a-8c69-b3186a10ffaa',order_type:'dine_in',subtotal:12,total:12,note:'',table_number:2,payment_method:'cash',table_call_id:staffCall};
 const staffItems=[{product_id:'88888888-8888-4888-8888-888888888888',quantity:1,_server_product_name:'Pizza',_server_unit_price:12,options:[]}];
 await pg.exec('RESET ROLE; SET ROLE service_role');
 const staffArgs=['99999999-9999-4999-8999-999999999999',staff,JSON.stringify(staffOrder),JSON.stringify(staffItems)];
 const staffFirst=(await pg.query('select submit_staff_order($1,$2,$3,$4) as o',staffArgs)).rows[0].o;
 const staffRetry=(await pg.query('select submit_staff_order($1,$2,$3,$4) as o',staffArgs)).rows[0].o;
 assert.equal(staffFirst.id,staffRetry.id);assert.equal(staffFirst.order_source,'server');assert.equal(staffFirst.status,'pending');checks+=3;
+await check("select status from table_service_calls where id=$1",[staffCall],[{status:'resolved'}]);
+await rejects('select submit_staff_order($1,$2,$3,$4)',['aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa',staff,JSON.stringify(staffOrder),JSON.stringify(staffItems)]);
 await check("select can_deliver,can_serve from delivery_drivers where id='77777777-7777-4777-8777-777777777777'",[],[{can_deliver:true,can_serve:true}]);
 const hours=(await pg.query("select opening_hours->'monday'->>'closed' as monday_closed, opening_hours->'friday'->'intervals'->0->>'open' as friday_open from restaurants where slug='la-parmigiana'")).rows[0];
 assert.deepEqual(hours,{monday_closed:'true',friday_open:'17:30'});checks++;

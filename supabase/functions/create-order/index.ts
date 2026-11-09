@@ -240,6 +240,7 @@ Deno.serve(async (req) => {
     if (order_source === "phone" && order_type === "delivery" && !safeDeliveryPostcode) return json({ error: "Un code postal belge à 4 chiffres est requis pour une livraison téléphonique" }, 400);
     if (order_source === "phone" && !isValidUUID(body.request_id)) return json({ error: "Identifiant de requête requis" }, 400);
     if (order_source === "server" && (!isValidUUID(body.request_id) || order_type !== "dine_in" || typeof table_number !== "number" || !Number.isInteger(table_number) || table_number < 1 || table_number > 10)) return json({ error: "Commande serveur invalide (table 1 à 10 requise)" }, 400);
+    if (body.table_call_id != null && (order_source !== "server" || !isValidUUID(body.table_call_id))) return json({ error: "Appel de table invalide" }, 400);
     // ── Rate limiting ───────────────────────────────────────────
     if (isOrderRateLimited(guest_session_id)) {
       return json({ error: "Trop de commandes, veuillez patienter" }, 429);
@@ -515,7 +516,7 @@ Deno.serve(async (req) => {
       if (!authenticatedUserId || safeOrderType !== "dine_in" || !safeTableNumber || safeTableNumber > 10) return json({ error: "Commande serveur invalide" }, 400);
       const { data: staffOrder, error: staffOrderError } = await supabase.rpc("submit_staff_order", {
         p_request_id: body.request_id, p_user_id: authenticatedUserId,
-        p_order: { restaurant_id, order_type: safeOrderType, subtotal, total, note: safeNote, table_number: safeTableNumber, payment_method: safePaymentMethod },
+        p_order: { restaurant_id, order_type: safeOrderType, subtotal, total, note: safeNote, table_number: safeTableNumber, payment_method: safePaymentMethod, table_call_id: body.table_call_id ?? null },
         p_items: items,
       });
       if (staffOrderError) throw staffOrderError;

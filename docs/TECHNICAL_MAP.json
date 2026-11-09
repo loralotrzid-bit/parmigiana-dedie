@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-31",
+  "updated": "2026-11-09",
   "project": "La Parmigiana - application dediee",
   "scope": "Index statique non exhaustif. Lignes a reverifier; imports dynamiques/acces construits non garantis. Deploiements et verifications au 2026-10-31 dans reports/audit-complet-2026-10-31.md.",
   "routes": [
@@ -2738,6 +2738,36 @@
         "edge_request_rate_limits",
         "phone_order_requests",
         "restaurant_order_number_counters"
+      ]
+    },
+    {
+      "path": "src/pages/delivery/StaffCashier.tsx",
+      "symbols": [
+        {
+          "name": "prepareTableCall"
+        },
+        {
+          "name": "submit"
+        }
+      ],
+      "tables_literal": [
+        "table_service_calls"
+      ]
+    },
+    {
+      "path": "supabase/migrations/20261109182639_allow_server_table_service_calls.sql",
+      "symbols": [
+        {
+          "name": "can_manage_table_service"
+        },
+        {
+          "name": "submit_staff_order"
+        }
+      ],
+      "tables_literal": [
+        "delivery_drivers",
+        "staff_order_requests",
+        "table_service_calls"
       ]
     }
   ]

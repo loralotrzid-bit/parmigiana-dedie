@@ -21,6 +21,12 @@ it.each(["phone", "pos"])("uses staff identity for %s even if an active guest ba
   expect(supabase.functions.invoke).toHaveBeenCalledWith("create-order", expect.objectContaining({ body: expect.objectContaining({ guest_session_id: "staff", menu_session_token: undefined, order_source: orderSource }) }));
   expect(getCurrentSession).toHaveBeenCalled();
 });
+it("sends the active table call as the idempotency key and keeps it server-side", async () => {
+  await createOrder("restaurant", [], "dine_in", { orderSource: "server", requestId: "call-id", tableNumber: 3, tableCallId: "call-id" });
+  expect(supabase.functions.invoke).toHaveBeenCalledWith("create-order", expect.objectContaining({
+    body: expect.objectContaining({ order_source: "server", request_id: "call-id", table_number: 3, table_call_id: "call-id" }),
+  }));
+});
 it("preserves the guest capability in the QR checkout", async () => {
   await createOrder("restaurant", [], "dine_in", { orderSource: "qr" });
   expect(supabase.functions.invoke).toHaveBeenCalledWith("create-order", expect.objectContaining({ body: expect.objectContaining({ guest_session_id: "guest-cart", menu_session_token: "guest-capability" }) }));
