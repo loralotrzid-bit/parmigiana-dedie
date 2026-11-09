@@ -5,7 +5,7 @@ CREATE OR REPLACE FUNCTION public.can_manage_table_service(p_restaurant uuid)
 RETURNS boolean
 LANGUAGE sql
 STABLE
-SECURITY DEFINER
+SECURITY INVOKER
 SET search_path = ''
 AS $$
   SELECT auth.uid() IS NOT NULL AND (
