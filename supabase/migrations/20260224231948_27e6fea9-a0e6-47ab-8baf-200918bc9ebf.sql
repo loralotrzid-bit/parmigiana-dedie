@@ -1,0 +1,1 @@
+ALTER TABLE public.restaurants ADD COLUMN cuisine_categories text[] NOT NULL DEFAULT '{}'::text[];

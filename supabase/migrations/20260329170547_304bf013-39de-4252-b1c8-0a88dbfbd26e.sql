@@ -1,0 +1,1 @@
+ALTER VIEW public.public_restaurants SET (security_invoker = true);

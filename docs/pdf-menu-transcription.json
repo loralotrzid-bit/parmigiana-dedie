@@ -1,0 +1,388 @@
+{
+  "Pizzas": [
+    [
+      "Focaccia",
+      8
+    ],
+    [
+      "Marinara",
+      9
+    ],
+    [
+      "Margherita",
+      11
+    ],
+    [
+      "Funghi",
+      12
+    ],
+    [
+      "Carciofa",
+      12
+    ],
+    [
+      "Prosciutto",
+      12
+    ],
+    [
+      "Salsiccia",
+      12
+    ],
+    [
+      "Napoletana",
+      12
+    ],
+    [
+      "Bolognaise",
+      13
+    ],
+    [
+      "Pugliese",
+      13
+    ],
+    [
+      "Parmigiana",
+      13
+    ],
+    [
+      "Diavola",
+      13
+    ],
+    [
+      "Siciliana",
+      13
+    ],
+    [
+      "Modena",
+      13
+    ],
+    [
+      "Salsiccia e funghi",
+      13
+    ],
+    [
+      "Carolo",
+      13
+    ],
+    [
+      "Chèvre",
+      13
+    ],
+    [
+      "Caprese",
+      13
+    ],
+    [
+      "Hawaïenne",
+      13
+    ],
+    [
+      "Chicken crème",
+      13
+    ],
+    [
+      "Chicken tomate",
+      13
+    ],
+    [
+      "Calzone (fermée)",
+      13
+    ],
+    [
+      "Calzone farcito",
+      14
+    ],
+    [
+      "Veneziana",
+      14
+    ],
+    [
+      "Spéciale",
+      14
+    ],
+    [
+      "4 fromages",
+      14
+    ],
+    [
+      "Gustosa",
+      14
+    ],
+    [
+      "Ankara",
+      14
+    ],
+    [
+      "4 saisons",
+      14
+    ],
+    [
+      "Caprissosa",
+      15
+    ],
+    [
+      "Contadina",
+      14
+    ],
+    [
+      "Parisienne",
+      14
+    ],
+    [
+      "Romana",
+      14
+    ],
+    [
+      "Calabrese",
+      14
+    ],
+    [
+      "Lardière",
+      15
+    ],
+    [
+      "Végétarienne",
+      15
+    ],
+    [
+      "César",
+      15
+    ],
+    [
+      "Raclette",
+      15
+    ],
+    [
+      "Bianca neve",
+      14
+    ],
+    [
+      "Ricotina",
+      15
+    ],
+    [
+      "Tartufata",
+      16
+    ],
+    [
+      "Parma",
+      16
+    ],
+    [
+      "Norvegese",
+      16
+    ],
+    [
+      "Frutti di mare",
+      16
+    ],
+    [
+      "Scampis crème",
+      16
+    ],
+    [
+      "Scampis tomate",
+      16
+    ],
+    [
+      "Mari e monti",
+      17
+    ],
+    [
+      "4 viandes",
+      17
+    ],
+    [
+      "Pizza du chef",
+      17
+    ]
+  ],
+  "Entrées": [
+    [
+      "Arancini bolognaise",
+      6
+    ],
+    [
+      "Arancini 4 fromages",
+      6
+    ],
+    [
+      "Panzerotti fritti",
+      5
+    ],
+    [
+      "Pain à l’ail",
+      5
+    ]
+  ],
+  "Pâtes": [
+    [
+      "Penne Arrabiata",
+      12
+    ],
+    [
+      "Penne Jambon Crème",
+      13
+    ],
+    [
+      "Penne Poulet crème",
+      14
+    ],
+    [
+      "Penne Poulet tomate",
+      14
+    ],
+    [
+      "Penne Poulet tomate et crème",
+      14
+    ],
+    [
+      "Spaghetti Bolognaise",
+      14
+    ],
+    [
+      "Penne 4 Fromages",
+      14
+    ],
+    [
+      "Penne crème champignon",
+      14
+    ],
+    [
+      "Penne truffe",
+      14
+    ],
+    [
+      "Penne scampis crème",
+      16
+    ],
+    [
+      "Penne scampis tomate",
+      16
+    ],
+    [
+      "Penne scampis tomate et crème",
+      16
+    ],
+    [
+      "Spaghetti carbonara",
+      16
+    ]
+  ],
+  "Escalopes": [
+    [
+      "Escalope de veau",
+      20
+    ]
+  ],
+  "Desserts": [
+    [
+      "Demi-lune de nutella",
+      5
+    ],
+    [
+      "Tiramisu classique",
+      6
+    ],
+    [
+      "Tiramisu Speculoos",
+      6
+    ],
+    [
+      "Tiramisu pistaches",
+      6
+    ]
+  ],
+  "Cafés et infusions": [
+    [
+      "Café expresso",
+      2
+    ],
+    [
+      "Café long",
+      2.5
+    ],
+    [
+      "Infusion thé (Lipton citron)",
+      2.5
+    ],
+    [
+      "Infusion thé (Lipton menthe)",
+      2.5
+    ]
+  ],
+  "Boissons": [
+    [
+      "Eau plate",
+      2
+    ],
+    [
+      "Eau pétillante",
+      2
+    ],
+    [
+      "Capri-Sun",
+      2
+    ],
+    [
+      "Hawai",
+      2.5
+    ],
+    [
+      "Schweppes",
+      2.5
+    ],
+    [
+      "Schweppes agrumes",
+      2.5
+    ],
+    [
+      "Coca Cola",
+      2.5
+    ],
+    [
+      "Coca Cola zéro",
+      2.5
+    ],
+    [
+      "Fanta orange",
+      2.5
+    ],
+    [
+      "Fanta citron",
+      2.5
+    ],
+    [
+      "Fanta exotique",
+      2.5
+    ],
+    [
+      "Tropico",
+      2.5
+    ],
+    [
+      "Ice Tea",
+      2.5
+    ],
+    [
+      "Ice Tea pêche",
+      2.5
+    ],
+    [
+      "Ice Tea green",
+      2.5
+    ],
+    [
+      "Oasis tropical",
+      2.5
+    ],
+    [
+      "Sprite",
+      2.5
+    ],
+    [
+      "Red Bull",
+      3
+    ]
+  ]
+}

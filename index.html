@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob: https://*.supabase.co https://storage.googleapis.com https://*.tile.openstreetmap.org https://unpkg.com; connect-src 'self' https://*.supabase.co wss://*.supabase.co https://router.project-osrm.org https://photon.komoot.io https://accounts.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://accounts.google.com;" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>La Parmigiana — Menu digital</title>
+    <meta name="description" content="RZFood : commandez sur place, à emporter ou en livraison. Suivi en temps réel.">
+    <meta name="author" content="RZFood" />
+    <meta name="theme-color" content="#243529" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="RZFood" />
+
+    
+    
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="manifest" id="pwa-manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/pwa-192x192.png" />
+    <script>
+      (function(){
+        var p = location.pathname;
+        var m = '/manifest.json', a = '/pwa-192x192.png', t = '#243529';
+        if (p.startsWith('/delivery')) { m = '/manifest-delivery.json'; a = '/pwa-delivery-192x192.png'; t = '#1e3a5f'; }
+        else if (p.startsWith('/admin')) { m = '/manifest-admin.json'; a = '/pwa-admin-192x192.png'; t = '#2d2d2d'; }
+        document.getElementById('pwa-manifest').setAttribute('href', m);
+        document.querySelector('link[rel="apple-touch-icon"]').setAttribute('href', a);
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', t);
+      })();
+    </script>
+    
+  
+  
+  
+  <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/gpeLcGrJKXP30aCI8Gv43S3MEaf2/social-images/social-1772070363578-IMG_8030.webp">
+  <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/gpeLcGrJKXP30aCI8Gv43S3MEaf2/social-images/social-1772070363578-IMG_8030.webp">
+  
+  
+  
+  
+  <meta property="og:title" content="RZFood — Commandez facilement">
+  <meta name="twitter:title" content="RZFood — Commandez facilement">
+  <meta property="og:description" content="RZFood : commandez sur place, à emporter ou en livraison. Suivi en temps réel.">
+  <meta name="twitter:description" content="RZFood : commandez sur place, à emporter ou en livraison. Suivi en temps réel.">
+</head>
+
+  <body>
+    <style>
+      html,body,#root{min-height:100%;margin:0;background:#faf5e9}
+      #initial-splash{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#faf5e9;color:#243529;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;transition:opacity .18s ease}
+      #initial-splash .mark{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#243529;color:#faf5e9;font-family:Georgia,serif;font-size:27px;font-weight:700}
+      #initial-splash .loader{width:20px;height:20px;border:2px solid #24352930;border-top-color:#243529;border-radius:50%;animation:splash-spin .8s linear infinite;margin:18px auto 0}
+      @keyframes splash-spin{to{transform:rotate(360deg)}}
+      @media(prefers-reduced-motion:reduce){#initial-splash .loader{animation-duration:2s}}
+    </style>
+    <div id="initial-splash" role="status" aria-label="Chargement de La Parmigiana"><div><div class="mark">P</div><div class="loader"></div></div></div>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

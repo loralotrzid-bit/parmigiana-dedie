@@ -1,0 +1,2744 @@
+{
+  "updated": "2026-10-31",
+  "project": "La Parmigiana - application dediee",
+  "scope": "Index statique non exhaustif. Lignes a reverifier; imports dynamiques/acces construits non garantis. Deploiements et verifications au 2026-10-31 dans reports/audit-complet-2026-10-31.md.",
+  "routes": [
+    {
+      "path": "/table/:token",
+      "line": 67
+    },
+    {
+      "path": "/",
+      "line": 68
+    },
+    {
+      "path": "/home",
+      "line": 69
+    },
+    {
+      "path": "/menu/la-parmigiana",
+      "line": 70
+    },
+    {
+      "path": "/restaurant/la-parmigiana",
+      "line": 71
+    },
+    {
+      "path": "/cart",
+      "line": 72
+    },
+    {
+      "path": "/orders",
+      "line": 73
+    },
+    {
+      "path": "/orders/:id",
+      "line": 74
+    },
+    {
+      "path": "/account",
+      "line": 75
+    },
+    {
+      "path": "/legal",
+      "line": 76
+    },
+    {
+      "path": "/support",
+      "line": 77
+    },
+    {
+      "path": "/auth/signup",
+      "line": 80
+    },
+    {
+      "path": "/auth/login",
+      "line": 81
+    },
+    {
+      "path": "/auth/callback",
+      "line": 82
+    },
+    {
+      "path": "/auth/complete-profile",
+      "line": 83
+    },
+    {
+      "path": "/auth/forgot-password",
+      "line": 84
+    },
+    {
+      "path": "/reset-password",
+      "line": 85
+    },
+    {
+      "path": "/admin/login",
+      "line": 88
+    },
+    {
+      "path": "/admin/service",
+      "line": 91
+    },
+    {
+      "path": "/admin",
+      "line": 92
+    },
+    {
+      "path": "/admin/orders/:orderId",
+      "line": 93
+    },
+    {
+      "path": "/admin/recap",
+      "line": 94
+    },
+    {
+      "path": "/admin/menu",
+      "line": 95
+    },
+    {
+      "path": "/admin/drivers",
+      "line": 96
+    },
+    {
+      "path": "/admin/drivers/:driverId",
+      "line": 97
+    },
+    {
+      "path": "/admin/alerts",
+      "line": 98
+    },
+    {
+      "path": "/admin/settings",
+      "line": 99
+    },
+    {
+      "path": "/admin/caisse",
+      "line": 100
+    },
+    {
+      "path": "/delivery",
+      "line": 105
+    },
+    {
+      "path": "/delivery/active",
+      "line": 106
+    },
+    {
+      "path": "*",
+      "line": 109
+    }
+  ],
+  "files": [
+    {
+      "path": "src/components/admin/DriverQRSession.tsx",
+      "symbols": [
+        {
+          "name": "DriverQRSession",
+          "line": 12
+        }
+      ],
+      "tables_literal": [
+        "driver_sessions"
+      ]
+    },
+    {
+      "path": "src/components/admin/MenuConfigWizard.tsx",
+      "symbols": [
+        {
+          "name": "handleSaveProduct",
+          "line": 82
+        },
+        {
+          "name": "handleImageUpload",
+          "line": 127
+        },
+        {
+          "name": "handleCreateProduct",
+          "line": 142
+        },
+        {
+          "name": "handleCreateCategory",
+          "line": 162
+        }
+      ],
+      "tables_literal": [
+        "restaurant-images"
+      ]
+    },
+    {
+      "path": "src/components/admin/OptionGroupConfigurator.tsx",
+      "symbols": [],
+      "tables_literal": [
+        "categories",
+        "product_option_groups",
+        "product_options",
+        "products"
+      ]
+    },
+    {
+      "path": "src/components/admin/RecapExport.tsx",
+      "symbols": [
+        {
+          "name": "buildRows",
+          "line": 22
+        },
+        {
+          "name": "buildCompanyHeader",
+          "line": 40
+        },
+        {
+          "name": "exportCSV",
+          "line": 50
+        },
+        {
+          "name": "exportExcel",
+          "line": 70
+        },
+        {
+          "name": "exportPDF",
+          "line": 90
+        },
+        {
+          "name": "downloadFile",
+          "line": 133
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/components/admin/ServiceCallsPanel.tsx",
+      "symbols": [
+        {
+          "name": "ServiceCallsPanel",
+          "line": 6
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/components/admin/SqlConsoleDialog.tsx",
+      "symbols": [
+        {
+          "name": "handleTemplate",
+          "line": 142
+        },
+        {
+          "name": "handleCopyId",
+          "line": 147
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/components/admin/TwoFactorSetup.tsx",
+      "symbols": [
+        {
+          "name": "handleSetup",
+          "line": 23
+        },
+        {
+          "name": "handleVerify",
+          "line": 42
+        },
+        {
+          "name": "handleDisable",
+          "line": 61
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/components/chat/OrderChatWidget.tsx",
+      "symbols": [
+        {
+          "name": "handleSend",
+          "line": 69
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/components/client/AddressButton.tsx",
+      "symbols": [
+        {
+          "name": "getSavedAddress",
+          "line": 17
+        },
+        {
+          "name": "setSavedAddress",
+          "line": 26
+        },
+        {
+          "name": "handleSelect",
+          "line": 39
+        },
+        {
+          "name": "handleClear",
+          "line": 45
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/components/client/AuthModal.tsx",
+      "symbols": [
+        {
+          "name": "handleOAuth",
+          "line": 20
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/components/client/CustomerInfoForm.tsx",
+      "symbols": [
+        {
+          "name": "loadGuestInfo",
+          "line": 24
+        },
+        {
+          "name": "saveGuestInfo",
+          "line": 33
+        },
+        {
+          "name": "handleAddressSelect",
+          "line": 56
+        },
+        {
+          "name": "handleAddressClear",
+          "line": 65
+        },
+        {
+          "name": "handleSubmit",
+          "line": 80
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/components/client/DeliveryAddressInput.tsx",
+      "symbols": [
+        {
+          "name": "handleGeolocate",
+          "line": 46
+        },
+        {
+          "name": "handleSearch",
+          "line": 90
+        },
+        {
+          "name": "handleClear",
+          "line": 234
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/components/client/DeliveryMap.tsx",
+      "symbols": [
+        {
+          "name": "fetchRoute",
+          "line": 26
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/components/client/GuestPrompt.tsx",
+      "symbols": [
+        {
+          "name": "handleConfirm",
+          "line": 15
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/components/client/OrderChat.tsx",
+      "symbols": [
+        {
+          "name": "handleSend",
+          "line": 85
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/components/client/PostOrderSignup.tsx",
+      "symbols": [
+        {
+          "name": "handleDismiss",
+          "line": 22
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/components/client/ProfileCompletion.tsx",
+      "symbols": [
+        {
+          "name": "handleAddressSelect",
+          "line": 138
+        },
+        {
+          "name": "handleAddressClear",
+          "line": 147
+        },
+        {
+          "name": "handleSubmit",
+          "line": 160
+        }
+      ],
+      "tables_literal": [
+        "profiles"
+      ]
+    },
+    {
+      "path": "src/components/client/ScheduleOrderPicker.tsx",
+      "symbols": [
+        {
+          "name": "localDateAt",
+          "line": 16
+        },
+        {
+          "name": "toDateKey",
+          "line": 21
+        },
+        {
+          "name": "weekdayKey",
+          "line": 25
+        },
+        {
+          "name": "labelForDate",
+          "line": 29
+        },
+        {
+          "name": "isDayClosed",
+          "line": 45
+        },
+        {
+          "name": "getHoursForDay",
+          "line": 55
+        },
+        {
+          "name": "buildDays",
+          "line": 65
+        },
+        {
+          "name": "generateSlots",
+          "line": 80
+        },
+        {
+          "name": "handleModeChange",
+          "line": 151
+        },
+        {
+          "name": "handleDaySelect",
+          "line": 156
+        },
+        {
+          "name": "handleTimeSelect",
+          "line": 163
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/components/product/ProductModal.tsx",
+      "symbols": [
+        {
+          "name": "handleAdd",
+          "line": 153
+        },
+        {
+          "name": "handleConfirmSwitch",
+          "line": 168
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/components/restaurant/RestaurantCard.tsx",
+      "symbols": [
+        {
+          "name": "RestaurantCard",
+          "line": 41
+        },
+        {
+          "name": "handleClick",
+          "line": 75
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/contexts/AuthContext.tsx",
+      "symbols": [
+        {
+          "name": "clearCheckoutStorage",
+          "line": 12
+        },
+        {
+          "name": "isAnon",
+          "line": 49
+        },
+        {
+          "name": "AuthProvider",
+          "line": 53
+        },
+        {
+          "name": "handleUser",
+          "line": 138
+        },
+        {
+          "name": "useAuth",
+          "line": 338
+        }
+      ],
+      "tables_literal": [
+        "profiles",
+        "user_roles"
+      ]
+    },
+    {
+      "path": "src/contexts/CartContext.tsx",
+      "symbols": [
+        {
+          "name": "dedupeItems",
+          "line": 52
+        },
+        {
+          "name": "rowsToItems",
+          "line": 68
+        },
+        {
+          "name": "CartProvider",
+          "line": 80
+        },
+        {
+          "name": "useCart",
+          "line": 356
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/hooks/use-mobile.tsx",
+      "symbols": [
+        {
+          "name": "useIsMobile",
+          "line": 5
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/hooks/use-toast.ts",
+      "symbols": [
+        {
+          "name": "genId",
+          "line": 24
+        },
+        {
+          "name": "dispatch",
+          "line": 128
+        },
+        {
+          "name": "toast",
+          "line": 137
+        },
+        {
+          "name": "useToast",
+          "line": 166
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/hooks/useAdminNotificationSound.ts",
+      "symbols": [
+        {
+          "name": "useAdminNotificationSound",
+          "line": 8
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/hooks/useChatNotificationSound.ts",
+      "symbols": [
+        {
+          "name": "useChatNotificationSound",
+          "line": 7
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/hooks/useClientNotificationSound.ts",
+      "symbols": [
+        {
+          "name": "useClientNotificationSound",
+          "line": 7
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/hooks/useDeliveryDriver.tsx",
+      "symbols": [
+        {
+          "name": "loadSession",
+          "line": 23
+        },
+        {
+          "name": "saveSession",
+          "line": 39
+        },
+        {
+          "name": "useDeliveryDriver",
+          "line": 43
+        },
+        {
+          "name": "validateSessionToken",
+          "line": 144
+        },
+        {
+          "name": "tryDefaultDriver",
+          "line": 163
+        },
+        {
+          "name": "lookupDriver",
+          "line": 180
+        }
+      ],
+      "tables_literal": [
+        "delivery_drivers",
+        "restaurants"
+      ]
+    },
+    {
+      "path": "src/hooks/useDriverGps.ts",
+      "symbols": [
+        {
+          "name": "haversineM",
+          "line": 23
+        },
+        {
+          "name": "useDriverGps",
+          "line": 41
+        },
+        {
+          "name": "handlePosition",
+          "line": 122
+        }
+      ],
+      "tables_literal": [
+        "driver_locations"
+      ]
+    },
+    {
+      "path": "src/hooks/useImagePrefetch.ts",
+      "symbols": [
+        {
+          "name": "prefetchImage",
+          "line": 15
+        },
+        {
+          "name": "useImagePrefetch",
+          "line": 23
+        },
+        {
+          "name": "optimizedUrl",
+          "line": 55
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/hooks/useProductConfigurator.ts",
+      "symbols": [
+        {
+          "name": "useProductConfigurator",
+          "line": 28
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/hooks/useRealtimeDriverLocation.ts",
+      "symbols": [
+        {
+          "name": "useRealtimeDriverLocation",
+          "line": 16
+        }
+      ],
+      "tables_literal": [
+        "driver_locations"
+      ]
+    },
+    {
+      "path": "src/hooks/useRealtimeOrder.ts",
+      "symbols": [
+        {
+          "name": "useRealtimeOrder",
+          "line": 9
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/hooks/useRealtimeOrders.ts",
+      "symbols": [
+        {
+          "name": "useRealtimeOrders",
+          "line": 9
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/hooks/useResolvedAuthUser.ts",
+      "symbols": [
+        {
+          "name": "useResolvedAuthUser",
+          "line": 10
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/layouts/AdminLayout.tsx",
+      "symbols": [
+        {
+          "name": "handleLogout",
+          "line": 31
+        }
+      ],
+      "tables_literal": [
+        "restaurants"
+      ]
+    },
+    {
+      "path": "src/lib/apiTimeout.ts",
+      "symbols": [
+        {
+          "name": "withTimeout",
+          "line": 7
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/lib/authOrigin.ts",
+      "symbols": [
+        {
+          "name": "safeOrigin",
+          "line": 3
+        },
+        {
+          "name": "getAuthOrigin",
+          "line": 11
+        },
+        {
+          "name": "buildAuthCallbackUrl",
+          "line": 19
+        },
+        {
+          "name": "maybeRedirectToCanonicalAuthOrigin",
+          "line": 25
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/lib/authSession.ts",
+      "symbols": [
+        {
+          "name": "updateTabsRegistry",
+          "line": 20
+        },
+        {
+          "name": "removeTabFromRegistry",
+          "line": 34
+        },
+        {
+          "name": "initAuthMonitor",
+          "line": 46
+        },
+        {
+          "name": "clearCurrentSessionCache",
+          "line": 72
+        },
+        {
+          "name": "getCurrentSession",
+          "line": 81
+        },
+        {
+          "name": "waitForSession",
+          "line": 100
+        },
+        {
+          "name": "isValidSession",
+          "line": 104
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/lib/cache.ts",
+      "symbols": [
+        {
+          "name": "scheduleCleanup",
+          "line": 17
+        },
+        {
+          "name": "cached",
+          "line": 32
+        },
+        {
+          "name": "invalidateCache",
+          "line": 83
+        },
+        {
+          "name": "clearAllCache",
+          "line": 98
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/lib/debugLog.ts",
+      "symbols": [
+        {
+          "name": "pushLog",
+          "line": 43
+        },
+        {
+          "name": "onLogUpdate",
+          "line": 54
+        },
+        {
+          "name": "getLogBuffer",
+          "line": 60
+        },
+        {
+          "name": "clearLogBuffer",
+          "line": 65
+        },
+        {
+          "name": "exportLogsAsText",
+          "line": 72
+        },
+        {
+          "name": "isDebugEnabled",
+          "line": 84
+        },
+        {
+          "name": "setDebugEnabled",
+          "line": 88
+        },
+        {
+          "name": "now",
+          "line": 92
+        },
+        {
+          "name": "dbg",
+          "line": 100
+        },
+        {
+          "name": "dbgError",
+          "line": 124
+        },
+        {
+          "name": "dbgAuthState",
+          "line": 135
+        },
+        {
+          "name": "detectExtensions",
+          "line": 152
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/lib/directSupabaseRest.ts",
+      "symbols": [
+        {
+          "name": "headers",
+          "line": 9
+        },
+        {
+          "name": "directSelect",
+          "line": 21
+        },
+        {
+          "name": "directInsert",
+          "line": 35
+        },
+        {
+          "name": "directUpdate",
+          "line": 54
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/lib/edgeFunctionFallback.ts",
+      "symbols": [
+        {
+          "name": "readTokenFromRawSession",
+          "line": 7
+        },
+        {
+          "name": "readAccessTokenFromStorage",
+          "line": 20
+        },
+        {
+          "name": "shouldUseEdgeFetchFallback",
+          "line": 29
+        },
+        {
+          "name": "invokeEdgeFunctionDirect",
+          "line": 42
+        },
+        {
+          "name": "isFunctionsFetchError",
+          "line": 82
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/lib/ensureClientProfile.ts",
+      "symbols": [
+        {
+          "name": "ensureClientProfile",
+          "line": 10
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/lib/geo.ts",
+      "symbols": [
+        {
+          "name": "haversineKm",
+          "line": 6
+        },
+        {
+          "name": "toRad",
+          "line": 19
+        },
+        {
+          "name": "calcDeliveryFee",
+          "line": 26
+        },
+        {
+          "name": "getUserBias",
+          "line": 57
+        },
+        {
+          "name": "setSearchBias",
+          "line": 64
+        },
+        {
+          "name": "normalizeQuery",
+          "line": 71
+        },
+        {
+          "name": "searchAddress",
+          "line": 85
+        },
+        {
+          "name": "reverseGeocode",
+          "line": 169
+        },
+        {
+          "name": "geocodeAddress",
+          "line": 213
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/lib/geolocation.ts",
+      "symbols": [
+        {
+          "name": "checkGeoPermission",
+          "line": 27
+        },
+        {
+          "name": "isAccurateEnough",
+          "line": 43
+        },
+        {
+          "name": "pickBestPosition",
+          "line": 50
+        },
+        {
+          "name": "requestCurrentPosition",
+          "line": 61
+        },
+        {
+          "name": "requestCurrentPositionWithError",
+          "line": 102
+        },
+        {
+          "name": "startWatchPosition",
+          "line": 176
+        },
+        {
+          "name": "stopWatchPosition",
+          "line": 208
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/lib/isOpenNow.ts",
+      "symbols": [
+        {
+          "name": "isOpenNow",
+          "line": 11
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/lib/oauthHashCapture.ts",
+      "symbols": [
+        {
+          "name": "consumeOAuthHashTokens",
+          "line": 37
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/lib/persistCache.ts",
+      "symbols": [
+        {
+          "name": "persistGet",
+          "line": 16
+        },
+        {
+          "name": "persistSet",
+          "line": 32
+        },
+        {
+          "name": "persistRemove",
+          "line": 43
+        },
+        {
+          "name": "persistClearAll",
+          "line": 52
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/lib/profileSeed.ts",
+      "symbols": [
+        {
+          "name": "cleanString",
+          "line": 10
+        },
+        {
+          "name": "buildProfileSeedFromSession",
+          "line": 16
+        },
+        {
+          "name": "setProfileSeed",
+          "line": 40
+        },
+        {
+          "name": "getProfileSeed",
+          "line": 47
+        },
+        {
+          "name": "clearProfileSeed",
+          "line": 63
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/lib/restClient.ts",
+      "symbols": [
+        {
+          "name": "restHeaders",
+          "line": 13
+        },
+        {
+          "name": "restQuery",
+          "line": 23
+        },
+        {
+          "name": "withTimeout",
+          "line": 43
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/lib/safeSupabaseCall.ts",
+      "symbols": [
+        {
+          "name": "isSourceReadOperation",
+          "line": 13
+        },
+        {
+          "name": "safeSupabaseCall",
+          "line": 25
+        },
+        {
+          "name": "safeSupabaseCallOrThrow",
+          "line": 62
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/lib/supabaseCallQueue.ts",
+      "symbols": [
+        {
+          "name": "isThenable",
+          "line": 21
+        },
+        {
+          "name": "getErrorMessage",
+          "line": 25
+        },
+        {
+          "name": "isLockError",
+          "line": 29
+        },
+        {
+          "name": "enqueueSupabaseCall",
+          "line": 41
+        },
+        {
+          "name": "wrapThenable",
+          "line": 81
+        },
+        {
+          "name": "patchSupabaseFrom",
+          "line": 109
+        },
+        {
+          "name": "patchSupabaseRpc",
+          "line": 122
+        },
+        {
+          "name": "patchSupabaseInvoke",
+          "line": 135
+        },
+        {
+          "name": "installSupabaseCallQueue",
+          "line": 149
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/lib/tabElection.ts",
+      "symbols": [
+        {
+          "name": "readOwner",
+          "line": 30
+        },
+        {
+          "name": "writeOwner",
+          "line": 40
+        },
+        {
+          "name": "claimActive",
+          "line": 46
+        },
+        {
+          "name": "becomePassive",
+          "line": 54
+        },
+        {
+          "name": "startHeartbeat",
+          "line": 61
+        },
+        {
+          "name": "stopHeartbeat",
+          "line": 69
+        },
+        {
+          "name": "electActiveTab",
+          "line": 74
+        },
+        {
+          "name": "startPassiveMonitor",
+          "line": 109
+        },
+        {
+          "name": "isActiveAuthTab",
+          "line": 123
+        },
+        {
+          "name": "forceClaimActiveTab",
+          "line": 128
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/lib/utils.ts",
+      "symbols": [
+        {
+          "name": "cn",
+          "line": 4
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/lib/vatUtils.ts",
+      "symbols": [
+        {
+          "name": "getVatRateForOrderType",
+          "line": 14
+        },
+        {
+          "name": "computeVat",
+          "line": 24
+        },
+        {
+          "name": "convertVat",
+          "line": 32
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/main.tsx",
+      "symbols": [
+        {
+          "name": "classifyError",
+          "line": 32
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/pages/admin/Dashboard.tsx",
+      "symbols": [
+        {
+          "name": "handleAccept",
+          "line": 126
+        },
+        {
+          "name": "handleRefresh",
+          "line": 419
+        },
+        {
+          "name": "handlePrint",
+          "line": 437
+        }
+      ],
+      "tables_literal": [
+        "restaurants"
+      ]
+    },
+    {
+      "path": "src/pages/admin/DriverHistory.tsx",
+      "symbols": [],
+      "tables_literal": [
+        "delivery_assignments",
+        "driver_locations"
+      ]
+    },
+    {
+      "path": "src/pages/admin/DriversManager.tsx",
+      "symbols": [
+        {
+          "name": "handleSubmit",
+          "line": 30
+        }
+      ],
+      "tables_literal": [
+        "restaurants"
+      ]
+    },
+    {
+      "path": "src/pages/admin/Login.tsx",
+      "symbols": [
+        {
+          "name": "getLoginAttempts",
+          "line": 11
+        },
+        {
+          "name": "setLoginAttempts",
+          "line": 21
+        },
+        {
+          "name": "handleSubmit",
+          "line": 72
+        },
+        {
+          "name": "handle2FAVerify",
+          "line": 121
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/pages/admin/MenuManager.tsx",
+      "symbols": [
+        {
+          "name": "handleSubmit",
+          "line": 59
+        },
+        {
+          "name": "handleProductImageUpload",
+          "line": 108
+        }
+      ],
+      "tables_literal": [
+        "restaurant-images",
+        "restaurants"
+      ]
+    },
+    {
+      "path": "src/pages/admin/OrderDetail.tsx",
+      "symbols": [],
+      "tables_literal": [
+        "delivery_assignments"
+      ]
+    },
+    {
+      "path": "src/pages/admin/OrdersRecap.tsx",
+      "symbols": [],
+      "tables_literal": [
+        "admin_alerts",
+        "chat_messages",
+        "delivery_assignments",
+        "order_item_choices",
+        "order_items",
+        "orders",
+        "restaurants"
+      ]
+    },
+    {
+      "path": "src/pages/admin/POS.tsx",
+      "symbols": [
+        {
+          "name": "handleProductClick",
+          "line": 106
+        },
+        {
+          "name": "handlePayment",
+          "line": 249
+        }
+      ],
+      "tables_literal": [
+        "restaurants"
+      ]
+    },
+    {
+      "path": "src/pages/admin/RestaurantSettings.tsx",
+      "symbols": [
+        {
+          "name": "handleAddressSearch",
+          "line": 168
+        },
+        {
+          "name": "handleImageUpload",
+          "line": 185
+        },
+        {
+          "name": "handleLogoUpload",
+          "line": 206
+        }
+      ],
+      "tables_literal": [
+        "restaurant-images",
+        "restaurants"
+      ]
+    },
+    {
+      "path": "src/pages/admin/SuperAdminDashboard.tsx",
+      "symbols": [
+        {
+          "name": "handleImpersonate",
+          "line": 172
+        }
+      ],
+      "tables_literal": [
+        "data_deletion_requests",
+        "eta_learning",
+        "profiles",
+        "restaurants",
+        "support_tickets",
+        "user_roles"
+      ]
+    },
+    {
+      "path": "src/pages/admin/TableService.tsx",
+      "symbols": [
+        {
+          "name": "TableService",
+          "line": 9
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/pages/auth/Callback.tsx",
+      "symbols": [
+        {
+          "name": "decodeStateRedirect",
+          "line": 10
+        },
+        {
+          "name": "getSafeRedirect",
+          "line": 21
+        },
+        {
+          "name": "handled",
+          "line": 38
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/pages/auth/CompleteProfile.tsx",
+      "symbols": [],
+      "tables_literal": [
+        "profiles"
+      ]
+    },
+    {
+      "path": "src/pages/auth/ForgotPassword.tsx",
+      "symbols": [
+        {
+          "name": "handleSubmit",
+          "line": 13
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/pages/auth/Login.tsx",
+      "symbols": [
+        {
+          "name": "getSafeRedirect",
+          "line": 9
+        },
+        {
+          "name": "handleLogin",
+          "line": 26
+        },
+        {
+          "name": "handleOAuthLogin",
+          "line": 44
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/pages/auth/ResetPassword.tsx",
+      "symbols": [
+        {
+          "name": "handleSubmit",
+          "line": 38
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/pages/auth/Signup.tsx",
+      "symbols": [
+        {
+          "name": "getSafeRedirect",
+          "line": 8
+        },
+        {
+          "name": "handleSignup",
+          "line": 27
+        },
+        {
+          "name": "handleOAuthSignup",
+          "line": 45
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/pages/client/Account.tsx",
+      "symbols": [
+        {
+          "name": "handleLogout",
+          "line": 56
+        }
+      ],
+      "tables_literal": [
+        "data_deletion_requests",
+        "orders",
+        "profiles"
+      ]
+    },
+    {
+      "path": "src/pages/client/Cart.tsx",
+      "symbols": [
+        {
+          "name": "handleApplyPromo",
+          "line": 184
+        },
+        {
+          "name": "handleProceed",
+          "line": 250
+        },
+        {
+          "name": "handleInlineAuthenticated",
+          "line": 283
+        },
+        {
+          "name": "handleEmailLoginRedirect",
+          "line": 297
+        },
+        {
+          "name": "handleProfileComplete",
+          "line": 302
+        },
+        {
+          "name": "handleBack",
+          "line": 316
+        },
+        {
+          "name": "handleOrder",
+          "line": 322
+        }
+      ],
+      "tables_literal": [
+        "profiles"
+      ]
+    },
+    {
+      "path": "src/pages/client/DigitalMenu.tsx",
+      "symbols": [
+        {
+          "name": "DigitalMenu",
+          "line": 21
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/pages/client/Landing.tsx",
+      "symbols": [
+        {
+          "name": "handleGeolocate",
+          "line": 45
+        },
+        {
+          "name": "handleSearch",
+          "line": 85
+        },
+        {
+          "name": "handleSelect",
+          "line": 97
+        },
+        {
+          "name": "handleSubmit",
+          "line": 102
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/pages/client/MyOrders.tsx",
+      "symbols": [
+        {
+          "name": "handleOrderClick",
+          "line": 52
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/pages/client/OrderTracking.tsx",
+      "symbols": [
+        {
+          "name": "handleNewOrder",
+          "line": 176
+        }
+      ],
+      "tables_literal": [
+        "delivery_assignments",
+        "restaurants"
+      ]
+    },
+    {
+      "path": "src/pages/client/Restaurant.tsx",
+      "symbols": [
+        {
+          "name": "handleSelectProduct",
+          "line": 51
+        },
+        {
+          "name": "handleCategorySelect",
+          "line": 208
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/pages/client/Support.tsx",
+      "symbols": [
+        {
+          "name": "handleSubmit",
+          "line": 29
+        }
+      ],
+      "tables_literal": [
+        "support_tickets"
+      ]
+    },
+    {
+      "path": "src/pages/client/TableEntry.tsx",
+      "symbols": [
+        {
+          "name": "TableEntry",
+          "line": 7
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/pages/delivery/ActiveDelivery.tsx",
+      "symbols": [],
+      "tables_literal": [
+        "order_item_choices",
+        "order_items"
+      ]
+    },
+    {
+      "path": "src/pages/delivery/DeliveryList.tsx",
+      "symbols": [],
+      "tables_literal": [
+        "order_item_choices",
+        "order_items"
+      ]
+    },
+    {
+      "path": "src/services/adminMenuService.ts",
+      "symbols": [
+        {
+          "name": "createCategory",
+          "line": 5
+        },
+        {
+          "name": "updateCategory",
+          "line": 15
+        },
+        {
+          "name": "deleteCategory",
+          "line": 26
+        },
+        {
+          "name": "createProduct",
+          "line": 51
+        },
+        {
+          "name": "updateProduct",
+          "line": 61
+        },
+        {
+          "name": "deleteProduct",
+          "line": 72
+        },
+        {
+          "name": "cloneOptionGroupsToProducts",
+          "line": 86
+        }
+      ],
+      "tables_literal": [
+        "categories",
+        "product_option_groups",
+        "product_options",
+        "products"
+      ]
+    },
+    {
+      "path": "src/services/alertService.ts",
+      "symbols": [
+        {
+          "name": "fetchAlerts",
+          "line": 3
+        },
+        {
+          "name": "markAlertRead",
+          "line": 18
+        },
+        {
+          "name": "markAllAlertsRead",
+          "line": 26
+        },
+        {
+          "name": "fetchUnreadAlertCount",
+          "line": 34
+        }
+      ],
+      "tables_literal": [
+        "admin_alerts"
+      ]
+    },
+    {
+      "path": "src/services/auditService.ts",
+      "symbols": [
+        {
+          "name": "fetchAuditLogs",
+          "line": 3
+        },
+        {
+          "name": "insertAuditLog",
+          "line": 19
+        }
+      ],
+      "tables_literal": [
+        "audit_log"
+      ]
+    },
+    {
+      "path": "src/services/cartService.ts",
+      "symbols": [
+        {
+          "name": "getCartSessionId",
+          "line": 14
+        },
+        {
+          "name": "clearCartSessionId",
+          "line": 24
+        },
+        {
+          "name": "callCartApi",
+          "line": 64
+        },
+        {
+          "name": "fetchCart",
+          "line": 106
+        },
+        {
+          "name": "addCartItem",
+          "line": 110
+        },
+        {
+          "name": "updateCartItem",
+          "line": 121
+        },
+        {
+          "name": "updateCartItemQuantity",
+          "line": 133
+        },
+        {
+          "name": "removeCartItem",
+          "line": 140
+        },
+        {
+          "name": "clearCartBackend",
+          "line": 144
+        },
+        {
+          "name": "setCartOrderType",
+          "line": 148
+        },
+        {
+          "name": "mergeCartAfterLogin",
+          "line": 152
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/services/chatService.ts",
+      "symbols": [
+        {
+          "name": "fetchChatMessages",
+          "line": 3
+        },
+        {
+          "name": "sendChatMessage",
+          "line": 13
+        },
+        {
+          "name": "subscribeToChatMessages",
+          "line": 52
+        }
+      ],
+      "tables_literal": [
+        "chat_messages"
+      ]
+    },
+    {
+      "path": "src/services/deliveryApiService.ts",
+      "symbols": [
+        {
+          "name": "callDeliveryApi",
+          "line": 3
+        },
+        {
+          "name": "fetchAvailableOrders",
+          "line": 10
+        },
+        {
+          "name": "claimOrders",
+          "line": 20
+        },
+        {
+          "name": "fetchMyAssignments",
+          "line": 31
+        },
+        {
+          "name": "updateDeliveryStatus",
+          "line": 41
+        },
+        {
+          "name": "updateDriverLocation",
+          "line": 61
+        },
+        {
+          "name": "fetchDriverHistory",
+          "line": 77
+        },
+        {
+          "name": "releaseAllAssignments",
+          "line": 87
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/services/deliveryAssignmentService.ts",
+      "symbols": [
+        {
+          "name": "assignOrderToDriver",
+          "line": 3
+        },
+        {
+          "name": "updateAssignmentStatus",
+          "line": 13
+        },
+        {
+          "name": "fetchActiveAssignmentForDriver",
+          "line": 28
+        },
+        {
+          "name": "fetchAssignmentsByDriver",
+          "line": 39
+        }
+      ],
+      "tables_literal": [
+        "delivery_assignments"
+      ]
+    },
+    {
+      "path": "src/services/deliveryDriverService.ts",
+      "symbols": [
+        {
+          "name": "fetchDriversByRestaurant",
+          "line": 3
+        },
+        {
+          "name": "createDriver",
+          "line": 13
+        },
+        {
+          "name": "updateDriver",
+          "line": 26
+        },
+        {
+          "name": "deleteDriver",
+          "line": 46
+        },
+        {
+          "name": "fetchDriverStats",
+          "line": 54
+        }
+      ],
+      "tables_literal": [
+        "delivery_assignments",
+        "delivery_drivers"
+      ]
+    },
+    {
+      "path": "src/services/deliverySettingsService.ts",
+      "symbols": [
+        {
+          "name": "fetchDeliverySettings",
+          "line": 9
+        },
+        {
+          "name": "isDeliveryPaused",
+          "line": 18
+        },
+        {
+          "name": "toggleDeliveryPause",
+          "line": 27
+        }
+      ],
+      "tables_literal": [
+        "delivery_settings"
+      ]
+    },
+    {
+      "path": "src/services/digitalMenuService.ts",
+      "symbols": [
+        {
+          "name": "markMenuOrder",
+          "line": 6
+        },
+        {
+          "name": "readMenuReceipt",
+          "line": 14
+        },
+        {
+          "name": "readMenuSession",
+          "line": 22
+        },
+        {
+          "name": "call",
+          "line": 28
+        },
+        {
+          "name": "prepareMenuCart",
+          "line": 34
+        },
+        {
+          "name": "fetchMenuOrder",
+          "line": 45
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/services/etaService.ts",
+      "symbols": [
+        {
+          "name": "calculateEta",
+          "line": 8
+        }
+      ],
+      "tables_literal": [
+        "eta_learning",
+        "orders",
+        "restaurants"
+      ]
+    },
+    {
+      "path": "src/services/loyaltyService.ts",
+      "symbols": [
+        {
+          "name": "fetchLoyaltyProgress",
+          "line": 13
+        },
+        {
+          "name": "incrementLoyaltyScore",
+          "line": 20
+        },
+        {
+          "name": "claimReward",
+          "line": 27
+        },
+        {
+          "name": "getLoyaltyMessage",
+          "line": 35
+        }
+      ],
+      "tables_literal": [
+        "loyalty_progress"
+      ]
+    },
+    {
+      "path": "src/services/menuService.ts",
+      "symbols": [
+        {
+          "name": "fetchMenuByRestaurantId",
+          "line": 25
+        },
+        {
+          "name": "fetchFirstRestaurantId",
+          "line": 111
+        },
+        {
+          "name": "prefetchAllProductOptions",
+          "line": 123
+        },
+        {
+          "name": "fetchProductOptions",
+          "line": 231
+        },
+        {
+          "name": "fetchProductOptionGroups",
+          "line": 246
+        }
+      ],
+      "tables_literal": [
+        "categories",
+        "product_option_groups",
+        "product_options",
+        "products",
+        "restaurants"
+      ]
+    },
+    {
+      "path": "src/services/orderService.ts",
+      "symbols": [
+        {
+          "name": "toCreatedOrder",
+          "line": 32
+        },
+        {
+          "name": "resolveAuthenticatedSession",
+          "line": 41
+        },
+        {
+          "name": "getAuthenticatedUserId",
+          "line": 46
+        },
+        {
+          "name": "createOrder",
+          "line": 60
+        },
+        {
+          "name": "fetchOrderById",
+          "line": 143
+        },
+        {
+          "name": "fetchMyOrders",
+          "line": 176
+        },
+        {
+          "name": "fetchOrdersByRestaurant",
+          "line": 215
+        },
+        {
+          "name": "fetchOrdersWithItems",
+          "line": 222
+        },
+        {
+          "name": "updateOrderStatus",
+          "line": 256
+        },
+        {
+          "name": "cancelOrder",
+          "line": 288
+        },
+        {
+          "name": "deleteAllOrders",
+          "line": 292
+        },
+        {
+          "name": "deleteOrdersByIds",
+          "line": 304
+        }
+      ],
+      "tables_literal": [
+        "admin_alerts",
+        "chat_messages",
+        "delivery_assignments",
+        "order_item_choices",
+        "order_items",
+        "orders",
+        "public_restaurants"
+      ]
+    },
+    {
+      "path": "src/services/printService.ts",
+      "symbols": [
+        {
+          "name": "formatTime",
+          "line": 32
+        },
+        {
+          "name": "formatDate",
+          "line": 36
+        },
+        {
+          "name": "orderTypeLabel",
+          "line": 40
+        },
+        {
+          "name": "generateTicketHTML",
+          "line": 49
+        },
+        {
+          "name": "printOrderTicket",
+          "line": 154
+        },
+        {
+          "name": "getAutoPrintEnabled",
+          "line": 201
+        },
+        {
+          "name": "setAutoPrintEnabled",
+          "line": 205
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/services/promoCodeService.ts",
+      "symbols": [
+        {
+          "name": "fetchPromoCodes",
+          "line": 17
+        },
+        {
+          "name": "createPromoCode",
+          "line": 27
+        },
+        {
+          "name": "deletePromoCode",
+          "line": 46
+        },
+        {
+          "name": "togglePromoCode",
+          "line": 51
+        },
+        {
+          "name": "validatePromoCode",
+          "line": 55
+        },
+        {
+          "name": "calculateDiscount",
+          "line": 91
+        },
+        {
+          "name": "usePromoCode",
+          "line": 105
+        }
+      ],
+      "tables_literal": [
+        "promo_codes"
+      ]
+    },
+    {
+      "path": "src/services/restaurantConfigService.ts",
+      "symbols": [
+        {
+          "name": "fetchRestaurantConfig",
+          "line": 37
+        },
+        {
+          "name": "fetchAdminRestaurantConfig",
+          "line": 89
+        },
+        {
+          "name": "updateRestaurantConfig",
+          "line": 101
+        }
+      ],
+      "tables_literal": [
+        "public_restaurants",
+        "restaurants"
+      ]
+    },
+    {
+      "path": "src/services/restaurantService.ts",
+      "symbols": [
+        {
+          "name": "fetchRestaurants",
+          "line": 27
+        },
+        {
+          "name": "fetchRestaurantBySlug",
+          "line": 77
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "src/services/tableService.ts",
+      "symbols": [
+        {
+          "name": "getServiceTable",
+          "line": 26
+        },
+        {
+          "name": "requestTableService",
+          "line": 33
+        },
+        {
+          "name": "fetchServiceCalls",
+          "line": 38
+        },
+        {
+          "name": "advanceServiceCall",
+          "line": 44
+        },
+        {
+          "name": "fetchRestaurantTables",
+          "line": 48
+        },
+        {
+          "name": "getTableServiceStatus"
+        }
+      ],
+      "tables_literal": [
+        "restaurant_tables",
+        "table_service_calls"
+      ]
+    },
+    {
+      "path": "src/services/totpService.ts",
+      "symbols": [
+        {
+          "name": "callTotpApi",
+          "line": 3
+        },
+        {
+          "name": "getTotpStatus",
+          "line": 12
+        },
+        {
+          "name": "setupTotp",
+          "line": 17
+        },
+        {
+          "name": "verifyTotpSetup",
+          "line": 21
+        },
+        {
+          "name": "validateTotp",
+          "line": 25
+        },
+        {
+          "name": "disableTotp",
+          "line": 30
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "supabase/functions/_shared/menuPricing.ts",
+      "symbols": [
+        {
+          "name": "menuBasePrice",
+          "line": 1
+        },
+        {
+          "name": "isWeekend",
+          "line": 6
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "supabase/functions/_shared/menuSession.ts",
+      "symbols": [
+        {
+          "name": "hashToken",
+          "line": 1
+        },
+        {
+          "name": "resolveMenuSession",
+          "line": 6
+        }
+      ],
+      "tables_literal": [
+        "digital_menu_sessions"
+      ]
+    },
+    {
+      "path": "supabase/functions/_shared/orderPricing.ts",
+      "symbols": [
+        {
+          "name": "priceOptions",
+          "line": 22
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "supabase/functions/admin-create-user/index.ts",
+      "symbols": [],
+      "tables_literal": [
+        "profiles",
+        "user_roles"
+      ]
+    },
+    {
+      "path": "supabase/functions/cart-api/index.ts",
+      "symbols": [
+        {
+          "name": "tokenHasSubject",
+          "line": 15
+        },
+        {
+          "name": "json",
+          "line": 27
+        },
+        {
+          "name": "err",
+          "line": 34
+        },
+        {
+          "name": "isValidUUID",
+          "line": 40
+        },
+        {
+          "name": "validateAddItem",
+          "line": 44
+        },
+        {
+          "name": "normalizeOptions",
+          "line": 58
+        },
+        {
+          "name": "getOrCreateCart",
+          "line": 67
+        },
+        {
+          "name": "getCart",
+          "line": 115
+        },
+        {
+          "name": "addItem",
+          "line": 144
+        },
+        {
+          "name": "updateItem",
+          "line": 244
+        },
+        {
+          "name": "updateQuantity",
+          "line": 271
+        },
+        {
+          "name": "removeItem",
+          "line": 287
+        },
+        {
+          "name": "clearCart",
+          "line": 292
+        },
+        {
+          "name": "setOrderType",
+          "line": 303
+        },
+        {
+          "name": "mergeCart",
+          "line": 317
+        }
+      ],
+      "tables_literal": [
+        "cart_items",
+        "carts",
+        "categories",
+        "product_option_groups",
+        "product_options",
+        "products",
+        "restaurants"
+      ]
+    },
+    {
+      "path": "supabase/functions/cart-cleanup/index.ts",
+      "symbols": [],
+      "tables_literal": [
+        "cart_items",
+        "carts"
+      ]
+    },
+    {
+      "path": "supabase/functions/create-order/index.ts",
+      "symbols": [
+        {
+          "name": "json",
+          "line": 18
+        },
+        {
+          "name": "generateDeliveryCode",
+          "line": 25
+        },
+        {
+          "name": "isValidUUID",
+          "line": 50
+        },
+        {
+          "name": "sanitizeString",
+          "line": 54
+        },
+        {
+          "name": "getDateKeyInTimeZone",
+          "line": 68
+        },
+        {
+          "name": "isOrderRateLimited",
+          "line": 88
+        },
+        {
+          "name": "sanitizeCashDetails",
+          "line": 108
+        }
+      ],
+      "tables_literal": [
+        "categories",
+        "order_item_choices",
+        "order_items",
+        "orders",
+        "product_option_groups",
+        "product_options",
+        "products",
+        "profiles",
+        "restaurants",
+        "user_roles"
+      ]
+    },
+    {
+      "path": "supabase/functions/delivery-api/index.ts",
+      "symbols": [
+        {
+          "name": "json",
+          "line": 15
+        },
+        {
+          "name": "isValidUUID",
+          "line": 36
+        },
+        {
+          "name": "isRateLimited",
+          "line": 45
+        },
+        {
+          "name": "isCodeBruteForce",
+          "line": 61
+        },
+        {
+          "name": "recordFailedCodeAttempt",
+          "line": 70
+        }
+      ],
+      "tables_literal": [
+        "delivery_assignments",
+        "delivery_drivers",
+        "driver_locations",
+        "orders"
+      ]
+    },
+    {
+      "path": "supabase/functions/digital-menu/index.ts",
+      "symbols": [],
+      "tables_literal": [
+        "cart_items",
+        "carts",
+        "digital_menu_sessions",
+        "orders",
+        "product_option_groups",
+        "product_options",
+        "products",
+        "restaurant_tables",
+        "restaurants"
+      ]
+    },
+    {
+      "path": "supabase/functions/driver-session/index.ts",
+      "symbols": [
+        {
+          "name": "json",
+          "line": 15
+        },
+        {
+          "name": "isValidUUID",
+          "line": 22
+        },
+        {
+          "name": "generateSecureToken",
+          "line": 26
+        },
+        {
+          "name": "isValidateRateLimited",
+          "line": 37
+        }
+      ],
+      "tables_literal": [
+        "delivery_drivers",
+        "driver_sessions",
+        "profiles",
+        "restaurants",
+        "user_roles"
+      ]
+    },
+    {
+      "path": "supabase/functions/eta-learning-cron/index.ts",
+      "symbols": [
+        {
+          "name": "json",
+          "line": 15
+        }
+      ],
+      "tables_literal": [
+        "eta_learning",
+        "orders",
+        "restaurants",
+        "user_roles"
+      ]
+    },
+    {
+      "path": "supabase/functions/sql-console/index.ts",
+      "symbols": [],
+      "tables_literal": [
+        "user_roles"
+      ]
+    },
+    {
+      "path": "supabase/functions/totp-api/index.ts",
+      "symbols": [
+        {
+          "name": "json",
+          "line": 15
+        },
+        {
+          "name": "getEncryptionKey",
+          "line": 23
+        },
+        {
+          "name": "encryptSecret",
+          "line": 32
+        },
+        {
+          "name": "decryptSecret",
+          "line": 44
+        },
+        {
+          "name": "base32Encode",
+          "line": 56
+        },
+        {
+          "name": "base32Decode",
+          "line": 74
+        },
+        {
+          "name": "generateTOTP",
+          "line": 93
+        },
+        {
+          "name": "verifyTOTP",
+          "line": 122
+        },
+        {
+          "name": "isVerifyRateLimited",
+          "line": 162
+        },
+        {
+          "name": "getPlaintextSecret",
+          "line": 181
+        }
+      ],
+      "tables_literal": [
+        "totp_secrets",
+        "user_roles"
+      ]
+    },
+    {
+      "path": "supabase/functions/_shared/requestRateLimit.ts",
+      "symbols": [
+        {
+          "name": "consumeRequestRateLimit"
+        },
+        {
+          "name": "consumeRequestRateLimitPair"
+        },
+        {
+          "name": "getTrustedClientIp"
+        }
+      ],
+      "tables_literal": [
+        "edge_request_rate_limits"
+      ]
+    },
+    {
+      "path": "supabase/migrations/20261031172000_atomic_dual_rate_limit.sql",
+      "symbols": [
+        {
+          "name": "consume_edge_request_rate_limit_pair"
+        }
+      ],
+      "tables_literal": [
+        "edge_request_rate_limits"
+      ]
+    },
+    {
+      "path": "supabase/migrations/20261031173000_restrict_promo_rpc_access.sql",
+      "symbols": [
+        {
+          "name": "restrict_promo_rpc_access"
+        }
+      ],
+      "tables_literal": [
+        "promo_codes",
+        "user_roles",
+        "profiles"
+      ]
+    },
+    {
+      "path": "supabase/migrations/20261031174000_proxy_table_capabilities.sql",
+      "symbols": [
+        {
+          "name": "proxy_table_capabilities"
+        }
+      ],
+      "tables_literal": [
+        "restaurant_tables",
+        "table_service_calls"
+      ]
+    },
+    {
+      "path": "supabase/migrations/20261031175000_scope_restaurant_admin_reads.sql",
+      "symbols": [
+        {
+          "name": "scope_restaurant_admin_reads"
+        }
+      ],
+      "tables_literal": [
+        "restaurants",
+        "data_deletion_requests"
+      ]
+    },
+    {
+      "path": "src/test/SuperAdminRoute.test.tsx",
+      "symbols": [
+        {
+          "name": "SuperAdminRoute restaurant-admin denial"
+        },
+        {
+          "name": "SuperAdminRoute superadmin allow"
+        }
+      ],
+      "tables_literal": []
+    },
+    {
+      "path": "supabase/migrations/20261031180000_invoker_table_service_authorization.sql",
+      "symbols": [
+        {
+          "name": "can_manage_table_service"
+        }
+      ],
+      "tables_literal": [
+        "user_roles",
+        "profiles",
+        "restaurant_tables",
+        "table_service_calls"
+      ]
+    },
+    {
+      "path": "src/components/admin/PhoneDeliveryRatesManager.tsx",
+      "symbols": [
+        {
+          "name": "PhoneDeliveryRatesManager"
+        }
+      ],
+      "tables_literal": [
+        "restaurant_delivery_postcode_rates",
+        "restaurants"
+      ]
+    },
+    {
+      "path": "src/services/phoneDeliveryRatesService.ts",
+      "symbols": [
+        {
+          "name": "fetchPhoneDeliveryRates"
+        },
+        {
+          "name": "savePhoneDeliveryRate"
+        },
+        {
+          "name": "fetchPhoneDeliveryFallbackFee"
+        }
+      ],
+      "tables_literal": [
+        "restaurant_delivery_postcode_rates",
+        "restaurants"
+      ]
+    },
+    {
+      "path": "supabase/migrations/20261031190000_phone_delivery_postcode_rates.sql",
+      "symbols": [
+        {
+          "name": "phone_delivery_postcode_rates"
+        }
+      ],
+      "tables_literal": [
+        "restaurant_delivery_postcode_rates",
+        "restaurants",
+        "orders",
+        "phone_order_requests"
+      ]
+    },
+    {
+      "path": "supabase/migrations/20261031194500_atomic_order_number_allocator.sql",
+      "symbols": [
+        {
+          "name": "next_order_number"
+        }
+      ],
+      "tables_literal": [
+        "restaurant_order_number_counters",
+        "orders",
+        "order_items",
+        "order_item_choices"
+      ]
+    },
+    {
+      "path": "supabase/migrations/20261031200000_advisor_fk_indexes_and_rls_initplans.sql",
+      "symbols": [
+        {
+          "name": "advisor_fk_indexes_and_rls_initplans"
+        }
+      ],
+      "tables_literal": [
+        "admin_alerts",
+        "audit_log",
+        "carts",
+        "chat_messages",
+        "delivery_assignments",
+        "digital_menu_sessions",
+        "driver_sessions",
+        "order_items",
+        "phone_order_requests",
+        "product_option_groups",
+        "product_options",
+        "profiles",
+        "table_service_calls"
+      ]
+    },
+    {
+      "path": "supabase/migrations/20261031201500_pin_cascade_function_search_path.sql",
+      "symbols": [
+        {
+          "name": "delete_restaurant_cascade"
+        }
+      ],
+      "tables_literal": [
+        "restaurants",
+        "profiles",
+        "user_roles",
+        "orders",
+        "categories",
+        "products",
+        "carts"
+      ]
+    },
+    {
+      "path": "supabase/migrations/20261031203000_revoke_client_access_internal_tables.sql",
+      "symbols": [
+        {
+          "name": "revoke_client_access_internal_tables"
+        }
+      ],
+      "tables_literal": [
+        "cart_items",
+        "carts",
+        "digital_menu_sessions",
+        "edge_request_rate_limits",
+        "phone_order_requests",
+        "restaurant_order_number_counters"
+      ]
+    }
+  ]
+}

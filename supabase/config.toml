@@ -1,0 +1,31 @@
+project_id = "aehfmqoxvfuizcloowlj"
+
+[functions.digital-menu]
+verify_jwt = false
+
+[functions.create-order]
+verify_jwt = false
+
+[functions.eta-learning-cron]
+verify_jwt = false
+
+[functions.delivery-api]
+verify_jwt = false
+
+[functions.staff-account-admin]
+verify_jwt = false
+
+[functions.totp-api]
+verify_jwt = false
+
+[functions.cart-api]
+verify_jwt = false
+
+[functions.sql-console]
+verify_jwt = true
+
+[functions.site-diagnostic]
+verify_jwt = true
+
+[functions.admin-create-user]
+verify_jwt = true
